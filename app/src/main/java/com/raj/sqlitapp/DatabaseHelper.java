@@ -16,9 +16,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      static final String DB_NAME="tirtash.db";
      static final int DB_VERSION=1;
 
+     public static final String CREATE_TABLE="create table"+Table_Name+ "("
+             +_ID +"INTEGER PRIMARY KEY  AUTOINCREMENT ,"+SUBJECT +"TEXT NOT NULL ,"
+             +DESC+"TEXT );";
 
-    public DatabaseHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+
+    public DatabaseHelper(@Nullable Context context) {
+        super(context, DB_NAME, null, DB_VERSION);
     }
 
     @Override
