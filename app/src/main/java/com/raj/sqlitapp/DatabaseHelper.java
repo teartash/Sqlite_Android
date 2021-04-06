@@ -16,9 +16,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      static final String DB_NAME="tirtash.db";
      static final int DB_VERSION=1;
 
-     public static final String CREATE_TABLE="create table"+Table_Name+ "("
-             +_ID +"INTEGER PRIMARY KEY  AUTOINCREMENT ,"+SUBJECT +"TEXT NOT NULL ,"
-             +DESC+"TEXT );";
+     public static final String CREATE_TABLE="create table "+Table_Name+ "("
+             +_ID +" INTEGER PRIMARY KEY  AUTOINCREMENT ," +SUBJECT +" TEXT NOT NULL ,"
+             +DESC+" TEXT );";
 
 
     public DatabaseHelper(@Nullable Context context) {
@@ -33,7 +33,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " +Table_Name);
+        db.execSQL("DROP TABLE IF EXISTS " + Table_Name);
         onCreate(db);
 
     }
