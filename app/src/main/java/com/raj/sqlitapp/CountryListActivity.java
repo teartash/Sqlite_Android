@@ -43,7 +43,7 @@ public class CountryListActivity extends AppCompatActivity {
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long viewid) {
                 TextView idtextview=view.findViewById(R.id.id);
                 TextView titletextview=view.findViewById(R.id.title);
                 TextView desctextview=view.findViewById(R.id.desc);
